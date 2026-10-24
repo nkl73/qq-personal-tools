@@ -1,0 +1,16 @@
+name: 场景与功能需求
+description: 帮助验证哪些实际场景值得优先支持
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 你希望手机操作什么类型的脚本？
+      description: 请描述输入输出方式，不要提供私人脚本或密钥。
+    validations:
+      required: true
+  - type: textarea
+    id: alternative
+    attributes:
+      label: 目前怎么解决，遇到什么阻碍？
+    validations:
+      required: true

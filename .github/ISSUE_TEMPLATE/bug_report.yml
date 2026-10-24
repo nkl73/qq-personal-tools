@@ -1,0 +1,25 @@
+name: 问题反馈
+description: 使用脱敏的最小示例描述问题
+body:
+  - type: markdown
+    attributes:
+      value: 不要上传 .runtime、登录二维码、账号、Token、API Key 或私人聊天。
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境
+      description: Windows、Python 和 OneBot 组件版本，托管或外部模式
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤与最小示例
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 预期与实际结果
+    validations:
+      required: true

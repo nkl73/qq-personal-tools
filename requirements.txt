@@ -1,0 +1,7 @@
+# Optional local file readers. The bridge and OOXML/text readers work without them.
+pypdf==6.21.2
+openpyxl==3.1.5
+xlrd==2.0.2
+striprtf==0.0.32
+defusedxml==0.7.1
+et_xmlfile==2.0.0
