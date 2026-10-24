@@ -26,7 +26,8 @@ class ScriptTests(unittest.TestCase):
             try:
                 first=target.start()
                 self.assertIn("['a b', '$(literal)']",first.text)
-                self.assertIn(str(cwd),first.text)
+                # Windows may report the same directory using its long name rather than 8.3 spelling.
+                self.assertTrue(Path(first.text.splitlines()[1]).samefile(cwd))
                 turn=target.answer('  [CQ:at,qq=1] {Enter} & $(literal)  ')
                 self.assertTrue(turn.finished)
                 self.assertIn("'  [CQ:at,qq=1] {Enter} & $(literal)  '",turn.text)
